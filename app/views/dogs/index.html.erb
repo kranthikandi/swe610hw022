@@ -1,0 +1,15 @@
+<h1>List of Dogs</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <% @dogs.each do |dog| %>
+    <tr>
+      <td><%= link_to dog.name, dog %></td>
+      <td><%= dog.age %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "New", new_dog_path %>

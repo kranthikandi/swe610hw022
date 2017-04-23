@@ -1,0 +1,23 @@
+<% @dog.errors.full_messages.each do |message| %>
+<%= message %><br>
+<% end %>
+<h1> New Dog </h1>
+
+<%= form_for(@dog) do |f| %>
+  <div>
+  Name:
+  </div>
+  <div>
+  <%= f.text_field :name %>
+  </div>
+  <div>
+  Age:
+  </div>
+  <div>
+  <%= f.text_field :age %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back', dogs_path %>
